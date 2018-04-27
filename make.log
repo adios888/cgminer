@@ -1,0 +1,322 @@
+make  all-recursive
+make[1]: Entering directory `/home/cgminer-4.9.2_bk'
+Making all in lib
+make[2]: Entering directory `/home/cgminer-4.9.2_bk/lib'
+make  all-recursive
+make[3]: Entering directory `/home/cgminer-4.9.2_bk/lib'
+make[4]: Entering directory `/home/cgminer-4.9.2_bk/lib'
+  CC       dummy.o
+  CC       memchr.o
+  AR       libgnu.a
+make[4]: Leaving directory `/home/cgminer-4.9.2_bk/lib'
+make[3]: Leaving directory `/home/cgminer-4.9.2_bk/lib'
+make[2]: Leaving directory `/home/cgminer-4.9.2_bk/lib'
+Making all in compat
+make[2]: Entering directory `/home/cgminer-4.9.2_bk/compat'
+Making all in jansson-2.6
+make[3]: Entering directory `/home/cgminer-4.9.2_bk/compat/jansson-2.6'
+make  all-recursive
+make[4]: Entering directory `/home/cgminer-4.9.2_bk/compat/jansson-2.6'
+Making all in src
+make[5]: Entering directory `/home/cgminer-4.9.2_bk/compat/jansson-2.6/src'
+  CC       dump.lo
+  CC       error.lo
+  CC       hashtable.lo
+  CC       hashtable_seed.lo
+  CC       load.lo
+  CC       memory.lo
+  CC       pack_unpack.lo
+  CC       strbuffer.lo
+  CC       strconv.lo
+  CC       utf.lo
+  CC       value.lo
+  CCLD     libjansson.la
+make[5]: Leaving directory `/home/cgminer-4.9.2_bk/compat/jansson-2.6/src'
+make[5]: Entering directory `/home/cgminer-4.9.2_bk/compat/jansson-2.6'
+make[5]: Leaving directory `/home/cgminer-4.9.2_bk/compat/jansson-2.6'
+make[4]: Leaving directory `/home/cgminer-4.9.2_bk/compat/jansson-2.6'
+make[3]: Leaving directory `/home/cgminer-4.9.2_bk/compat/jansson-2.6'
+make[3]: Entering directory `/home/cgminer-4.9.2_bk/compat'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/home/cgminer-4.9.2_bk/compat'
+make[2]: Leaving directory `/home/cgminer-4.9.2_bk/compat'
+Making all in ccan
+make[2]: Entering directory `/home/cgminer-4.9.2_bk/ccan'
+  CC       opt/libccan_a-helpers.o
+  CC       opt/libccan_a-opt.o
+  CC       opt/libccan_a-parse.o
+  CC       opt/libccan_a-usage.o
+  AR       libccan.a
+make[2]: Leaving directory `/home/cgminer-4.9.2_bk/ccan'
+make[2]: Entering directory `/home/cgminer-4.9.2_bk'
+  CC       cgminer-cgminer.o
+  CC       cgminer-util.o
+  CC       cgminer-sha2.o
+  CC       cgminer-api.o
+  CC       cgminer-logging.o
+  CC       cgminer-klist.o
+  CC       cgminer-noncedup.o
+  CC       driver-serial-bitmine-D12.o
+#       @echo "  CC      " driver-serial-bitmine-D12.o;source='driver-serial-bitmine-D12.c' object='driver-serial-bitmine-D12.o' libtool=no \
+	#       DEPDIR=.deps depmode=gcc3 /bin/bash ./depcomp \
+	#   arm-poky-linux-gnueabi-gcc  -march=armv7-a -mfloat-abi=hard -mfpu=neon -mtune=cortex-a7 --sysroot=/opt/fsl-imx-fb/3.14.52-1.1.0/sysroots/cortexa7hf-vfp-neon-poky-linux-gnueabi -DHAVE_CONFIG_H -I.  -lpthread -fno-strict-aliasing -I./compat/jansson-2.6/src -I./compat/jansson-2.6/src  -I./lib -I./lib    -O3 -pipe -feliminate-unused-debug-types -c -o driver-serial-bitmine-D12.o `test -f 'driver-serial-bitmine-D12.c' || echo './'`driver-serial-bitmine-D12.c
+  CC       lkasic.o
+  CC       arrays.o
+arrays.c: In function 'ArrayNew':
+arrays.c:15:13: warning: incompatible implicit declaration of built-in function 'malloc'
+ #define New malloc
+             ^
+arrays.c:25:23: note: in expansion of macro 'New'
+  Array * arr=(Array *)New(2*DefaultArraySize*(sizeof(void *))+sizeof(Array));
+                       ^
+arrays.c: In function 'NewArray':
+arrays.c:15:13: warning: incompatible implicit declaration of built-in function 'malloc'
+ #define New malloc
+             ^
+arrays.c:44:23: note: in expansion of macro 'New'
+  Array * arr=(Array *)New(2*size*(sizeof(void *))+sizeof(Array));
+                       ^
+arrays.c: In function 'ArraySet':
+arrays.c:16:14: warning: incompatible implicit declaration of built-in function 'free'
+ #define Free free
+              ^
+arrays.c:85:17: note: in expansion of macro 'Free'
+                 Free((*arr)->item[index][0]);
+                 ^
+arrays.c: In function 'SetArray':
+arrays.c:16:14: warning: incompatible implicit declaration of built-in function 'free'
+ #define Free free
+              ^
+arrays.c:115:17: note: in expansion of macro 'Free'
+                 Free((*arr)->item[index][0]);
+                 ^
+arrays.c: In function 'ArrayAddSize':
+arrays.c:15:13: warning: incompatible implicit declaration of built-in function 'malloc'
+ #define New malloc
+             ^
+arrays.c:170:24: note: in expansion of macro 'New'
+  Array * arrr=(Array *)New(((*arr)->size+size)*2*(sizeof(void *))+sizeof(Array));
+                        ^
+arrays.c:16:14: warning: incompatible implicit declaration of built-in function 'free'
+ #define Free free
+              ^
+arrays.c:187:2: note: in expansion of macro 'Free'
+  Free(*arr);
+  ^
+arrays.c: In function 'ArrayFree':
+arrays.c:16:14: warning: incompatible implicit declaration of built-in function 'free'
+ #define Free free
+              ^
+arrays.c:212:4: note: in expansion of macro 'Free'
+    Free(arr->item[i][0]);
+    ^
+arrays.c:16:14: warning: incompatible implicit declaration of built-in function 'free'
+ #define Free free
+              ^
+arrays.c:215:2: note: in expansion of macro 'Free'
+  Free(arr);
+  ^
+arrays.c: In function 'ArrayTest':
+arrays.c:15:13: warning: incompatible implicit declaration of built-in function 'malloc'
+ #define New malloc
+             ^
+arrays.c:227:23: note: in expansion of macro 'New'
+     char *tmp=(char *)New(1200);
+                       ^
+#       @echo "  CC      " arrays.o;source='arrays.c' object='arrays.o' libtool=no \
+	#       DEPDIR=.deps depmode=gcc3 /bin/bash ./depcomp \
+	#   arm-poky-linux-gnueabi-gcc  -march=armv7-a -mfloat-abi=hard -mfpu=neon -mtune=cortex-a7 --sysroot=/opt/fsl-imx-fb/3.14.52-1.1.0/sysroots/cortexa7hf-vfp-neon-poky-linux-gnueabi -DHAVE_CONFIG_H -I.  -lpthread -fno-strict-aliasing -I./compat/jansson-2.6/src -I./compat/jansson-2.6/src  -I./lib -I./lib    -O3 -pipe -feliminate-unused-debug-types -c -o arrays.o `test -f 'arrays.c' || echo './'`arrays.c
+  CC       CgConfig.o
+CgConfig.c: In function 'initSetting':
+CgConfig.c:290:32: warning: passing argument 1 of 'GetInt' discards 'const' qualifier from pointer target type
+         setting.portWeb=GetInt(path, "\"HttpPort\"");
+                                ^
+CgConfig.c:133:5: note: expected 'char *' but argument is of type 'const char *'
+ int GetInt(char * confPath,char *name)
+     ^
+CgConfig.c:291:32: warning: passing argument 1 of 'GetInt' discards 'const' qualifier from pointer target type
+         setting.portApi=GetInt(path, "\"api-port\"");
+                                ^
+CgConfig.c:133:5: note: expected 'char *' but argument is of type 'const char *'
+ int GetInt(char * confPath,char *name)
+     ^
+CgConfig.c:292:29: warning: passing argument 1 of 'GetInt' discards 'const' qualifier from pointer target type
+         setting.volt=GetInt(path, "\"volt\"");
+                             ^
+CgConfig.c:133:5: note: expected 'char *' but argument is of type 'const char *'
+ int GetInt(char * confPath,char *name)
+     ^
+CgConfig.c:293:35: warning: passing argument 1 of 'GetInt' discards 'const' qualifier from pointer target type
+         setting.chipNumber=GetInt(path, "\"chipNumber\"");
+                                   ^
+CgConfig.c:133:5: note: expected 'char *' but argument is of type 'const char *'
+ int GetInt(char * confPath,char *name)
+     ^
+CgConfig.c:294:41: warning: passing argument 1 of 'GetInt' discards 'const' qualifier from pointer target type
+         setting.currentFrequency=GetInt(path, "\"frequency\"");
+                                         ^
+CgConfig.c:133:5: note: expected 'char *' but argument is of type 'const char *'
+ int GetInt(char * confPath,char *name)
+     ^
+CgConfig.c:296:39: warning: passing argument 1 of 'GetBool' discards 'const' qualifier from pointer target type
+         setting.failover_only=GetBool(path, "\"failover-only\"");
+                                       ^
+CgConfig.c:161:6: note: expected 'char *' but argument is of type 'const char *'
+ bool GetBool(char * confPath,char *name)
+      ^
+CgConfig.c:297:41: warning: passing argument 1 of 'GetBool' discards 'const' qualifier from pointer target type
+         setting.no_submit_stale=GetBool(path, "\"no-submit-stale\"");
+                                         ^
+CgConfig.c:161:6: note: expected 'char *' but argument is of type 'const char *'
+ bool GetBool(char * confPath,char *name)
+      ^
+CgConfig.c:298:33: warning: passing argument 1 of 'GetBool' discards 'const' qualifier from pointer target type
+         setting.autoNet=GetBool(path, "\"autoNet\"");
+                                 ^
+CgConfig.c:161:6: note: expected 'char *' but argument is of type 'const char *'
+ bool GetBool(char * confPath,char *name)
+      ^
+CgConfig.c:299:36: warning: passing argument 1 of 'GetBool' discards 'const' qualifier from pointer target type
+         setting.api_listen=GetBool(path, "\"api-listen\"");
+                                    ^
+CgConfig.c:161:6: note: expected 'char *' but argument is of type 'const char *'
+ bool GetBool(char * confPath,char *name)
+      ^
+CgConfig.c:300:39: warning: passing argument 1 of 'GetBool' discards 'const' qualifier from pointer target type
+         setting.autoFrequency=GetBool(path, "\"autoFrequency\"");
+                                       ^
+CgConfig.c:161:6: note: expected 'char *' but argument is of type 'const char *'
+ bool GetBool(char * confPath,char *name)
+      ^
+CgConfig.c:301:43: warning: passing argument 1 of 'GetBool' discards 'const' qualifier from pointer target type
+         setting.autoGetJobTimeOut=GetBool(path, "\"autoGetJobTimeOut\"");
+                                           ^
+CgConfig.c:161:6: note: expected 'char *' but argument is of type 'const char *'
+ bool GetBool(char * confPath,char *name)
+      ^
+CgConfig.c:302:33: warning: passing argument 1 of 'GetBool' discards 'const' qualifier from pointer target type
+         setting.isdebug=GetBool(path, "\"debug\"");
+                                 ^
+CgConfig.c:161:6: note: expected 'char *' but argument is of type 'const char *'
+ bool GetBool(char * confPath,char *name)
+      ^
+CgConfig.c:304:37: warning: passing argument 1 of 'ReadConfig' discards 'const' qualifier from pointer target type
+         setting.username=ReadConfig(path, "\"username\""); 
+                                     ^
+CgConfig.c:28:7: note: expected 'char *' but argument is of type 'const char *'
+ char *ReadConfig(char *fileName, char *item) {
+       ^
+CgConfig.c:305:37: warning: passing argument 1 of 'ReadConfig' discards 'const' qualifier from pointer target type
+         setting.password=ReadConfig(path, "\"password\""); 
+                                     ^
+CgConfig.c:28:7: note: expected 'char *' but argument is of type 'const char *'
+ char *ReadConfig(char *fileName, char *item) {
+       ^
+CgConfig.c:306:37: warning: passing argument 1 of 'ReadConfig' discards 'const' qualifier from pointer target type
+         setting.language=ReadConfig(path, "\"language\""); 
+                                     ^
+CgConfig.c:28:7: note: expected 'char *' but argument is of type 'const char *'
+ char *ReadConfig(char *fileName, char *item) {
+       ^
+CgConfig.c:307:38: warning: passing argument 1 of 'ReadConfig' discards 'const' qualifier from pointer target type
+         setting.api_allow=ReadConfig(path, "\"api-allow\"");
+                                      ^
+CgConfig.c:28:7: note: expected 'char *' but argument is of type 'const char *'
+ char *ReadConfig(char *fileName, char *item) {
+       ^
+CgConfig.c:310:45: warning: passing argument 1 of 'ReadConfig' discards 'const' qualifier from pointer target type
+         setting.defaultWebFolder=ReadConfig(path,"\"defaultWebFolder\"");
+                                             ^
+CgConfig.c:28:7: note: expected 'char *' but argument is of type 'const char *'
+ char *ReadConfig(char *fileName, char *item) {
+       ^
+CgConfig.c:311:41: warning: passing argument 1 of 'ReadConfig' discards 'const' qualifier from pointer target type
+         setting.frequencySet=ReadConfig(path,"\"frequencySet\"");
+                                         ^
+CgConfig.c:28:7: note: expected 'char *' but argument is of type 'const char *'
+ char *ReadConfig(char *fileName, char *item) {
+       ^
+CgConfig.c:315:47: warning: passing argument 1 of 'ReadConfig' discards 'const' qualifier from pointer target type
+         setting.pool[0].allSetting=ReadConfig(path,"\"pool1\"");
+                                               ^
+CgConfig.c:28:7: note: expected 'char *' but argument is of type 'const char *'
+ char *ReadConfig(char *fileName, char *item) {
+       ^
+CgConfig.c:316:47: warning: passing argument 1 of 'ReadConfig' discards 'const' qualifier from pointer target type
+         setting.pool[1].allSetting=ReadConfig(path,"\"pool2\"");//
+                                               ^
+CgConfig.c:28:7: note: expected 'char *' but argument is of type 'const char *'
+ char *ReadConfig(char *fileName, char *item) {
+       ^
+CgConfig.c:317:47: warning: passing argument 1 of 'ReadConfig' discards 'const' qualifier from pointer target type
+         setting.pool[2].allSetting=ReadConfig(path,"\"pool3\"");//
+                                               ^
+CgConfig.c:28:7: note: expected 'char *' but argument is of type 'const char *'
+ char *ReadConfig(char *fileName, char *item) {
+       ^
+CgConfig.c:319:31: warning: passing argument 1 of 'ReadConfig' discards 'const' qualifier from pointer target type
+         setting.ip=ReadConfig(path,"\"ip\"");
+                               ^
+CgConfig.c:28:7: note: expected 'char *' but argument is of type 'const char *'
+ char *ReadConfig(char *fileName, char *item) {
+       ^
+CgConfig.c:320:33: warning: passing argument 1 of 'ReadConfig' discards 'const' qualifier from pointer target type
+         setting.mask=ReadConfig(path,"\"mask\"");
+                                 ^
+CgConfig.c:28:7: note: expected 'char *' but argument is of type 'const char *'
+ char *ReadConfig(char *fileName, char *item) {
+       ^
+CgConfig.c:321:36: warning: passing argument 1 of 'ReadConfig' discards 'const' qualifier from pointer target type
+         setting.gateway=ReadConfig(path,"\"gateway\"");
+                                    ^
+CgConfig.c:28:7: note: expected 'char *' but argument is of type 'const char *'
+ char *ReadConfig(char *fileName, char *item) {
+       ^
+CgConfig.c:322:32: warning: passing argument 1 of 'ReadConfig' discards 'const' qualifier from pointer target type
+         setting.dns=ReadConfig(path,"\"dns\"");
+                                ^
+CgConfig.c:28:7: note: expected 'char *' but argument is of type 'const char *'
+ char *ReadConfig(char *fileName, char *item) {
+       ^
+CgConfig.c:323:38: warning: passing argument 1 of 'GetInt' discards 'const' qualifier from pointer target type
+         setting.invalid_cnt = GetInt(path,"\"invalid_cnt\"");
+                                      ^
+CgConfig.c:133:5: note: expected 'char *' but argument is of type 'const char *'
+ int GetInt(char * confPath,char *name)
+     ^
+CgConfig.c:324:45: warning: passing argument 1 of 'GetInt' discards 'const' qualifier from pointer target type
+         setting.scanwork_sleeptime = GetInt(path, "\"scanwork_sleeptime\""); 
+                                             ^
+CgConfig.c:133:5: note: expected 'char *' but argument is of type 'const char *'
+ int GetInt(char * confPath,char *name)
+     ^
+CgConfig.c:325:48: warning: passing argument 1 of 'GetDouble' discards 'const' qualifier from pointer target type
+         setting.board_reset_waittime=GetDouble(path, "\"board_reset_waittime\""); 
+                                                ^
+CgConfig.c:114:8: note: expected 'char *' but argument is of type 'const char *'
+ double GetDouble(char * confPath,char *name)
+        ^
+CgConfig.c:326:51: warning: passing argument 1 of 'GetDouble' discards 'const' qualifier from pointer target type
+         setting.board_reenable_waittime=GetDouble(path, "\"board_reenable_waittime\""); 
+                                                   ^
+CgConfig.c:114:8: note: expected 'char *' but argument is of type 'const char *'
+ double GetDouble(char * confPath,char *name)
+        ^
+CgConfig.c:327:40: warning: passing argument 1 of 'GetInt' discards 'const' qualifier from pointer target type
+         setting.temp_threshold= GetInt(path,"\"temp_threshold\"");
+                                        ^
+CgConfig.c:133:5: note: expected 'char *' but argument is of type 'const char *'
+ int GetInt(char * confPath,char *name)
+     ^
+CgConfig.c:328:40: warning: passing argument 1 of 'GetInt' discards 'const' qualifier from pointer target type
+         setting.task_interval = GetInt(path,"\"task_interval\"");
+                                        ^
+CgConfig.c:133:5: note: expected 'char *' but argument is of type 'const char *'
+ int GetInt(char * confPath,char *name)
+     ^
+#       @echo "  CC      " CgConfig.o;source='CgConfig.c' object='CgConfig.o' libtool=no \
+	#       DEPDIR=.deps depmode=gcc3 /bin/bash ./depcomp \
+	#   arm-poky-linux-gnueabi-gcc  -march=armv7-a -mfloat-abi=hard -mfpu=neon -mtune=cortex-a7 --sysroot=/opt/fsl-imx-fb/3.14.52-1.1.0/sysroots/cortexa7hf-vfp-neon-poky-linux-gnueabi -DHAVE_CONFIG_H -I.  -lpthread -fno-strict-aliasing -I./compat/jansson-2.6/src -I./compat/jansson-2.6/src  -I./lib -I./lib    -O3 -pipe -feliminate-unused-debug-types -c -o CgConfig.o `test -f 'CgConfig.c' || echo './'`CgConfig.c
+  CCLD     cgminer
+make[2]: Leaving directory `/home/cgminer-4.9.2_bk'
+make[1]: Leaving directory `/home/cgminer-4.9.2_bk'

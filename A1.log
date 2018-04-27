@@ -1,0 +1,14 @@
+config.h:360:#define USE_BITMINE_A1 1
+config.log:1507:| #define USE_BITMINE_A1 1
+config.log:1626:| #define USE_BITMINE_A1 1
+config.log:2472:#define USE_BITMINE_A1 1
+config.h.in:359:#undef USE_BITMINE_A1
+config.status:1064:D["USE_BITMINE_A1"]=" 1"
+configure.ac:272:	AC_DEFINE([USE_BITMINE_A1], [1], [Defined to 1 if Bitmine A1 support is wanted])
+api.c:32:	defined(USE_MINION) || defined(USE_COINTERRA) || defined(USE_BITMINE_A1) || \
+api.c:199:#ifdef USE_BITMINE_A1
+miner.h:1025:#ifdef USE_BITMINE_A1
+configure:9262:$as_echo "#define USE_BITMINE_A1 1" >>confdefs.h
+cgminer.c:260:#ifdef USE_BITMINE_A1
+cgminer.c:1349:#ifdef USE_BITMINE_A1
+cgminer.c:1906:#ifdef USE_BITMINE_A1
